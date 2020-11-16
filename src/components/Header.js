@@ -7,7 +7,7 @@ export const Header = () => {
             <div className="container">
                 <div className="inner-content">
                     <div className="brand">
-                        <link to="/">WatchList</link>
+                        <Link to="/">WatchList</Link>
                     </div>
                     <ul className="nav-links">
                         <li>
@@ -17,11 +17,11 @@ export const Header = () => {
                             <Link to="/watched">Watched</Link>
                         </li>
                         <li>
-                            <Link to="/add" className="btn">+ ADD</Link>
+                            <Link to="/add" className="btn btn-main">+ ADD</Link>
                         </li>
                     </ul>
                 </div>
             </div>
         </header>
-    )
-}
+    );
+};
