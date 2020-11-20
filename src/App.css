@@ -1,13 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
 
-:root {
-  --primary: #032541;
-  --secondary: #21d07a;
-  --white: #fff;
-}
-
 body {
   font-family: "Source Sans Pro", sans-serif;
+  background-color: rgb(255, 255, 255);
   padding: 0;
   margin: 0;
 }
@@ -17,24 +12,7 @@ body {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
+  padding: 0 10%;
 }
 
 *,
@@ -45,21 +23,19 @@ body {
 
 .btn {
   padding: 10px 15px;
-  background-color: var(--secondary);
-  color: var(--primary);
+  background-color: rgb(119, 6, 2);
+  color: white;
   border-radius: 5px;
   text-transform: uppercase;
-  font-weight: 700;
   display: inline-block;
   border: none;
-  font-size: 1rem;
   transition: all 0.3s ease;
   line-height: 1.1;
 }
 
 .btn:hover {
-  background-color: #1aa762;
-  opacity: 1;
+  background-color: white;
+  color: black;
   cursor: pointer;
 }
 
@@ -74,7 +50,7 @@ input:focus {
 
 /* Header Styles */
 header {
-  background-color: var(--primary);
+  background-color: black;
 }
 
 header .inner-content {
@@ -85,7 +61,7 @@ header .inner-content {
 }
 
 header a {
-  color: var(--white);
+  color: white;
   font-size: 1.25rem;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -126,11 +102,11 @@ header .nav-links li:last-child {
 
 .add-content .input-wrapper input {
   width: 100%;
-  background-color: var(--primary);
+  background-color: black;
   padding: 10px;
   border-radius: 5px;
   border: none;
-  color: var(--white);
+  color: white;
   font-size: 1.25rem;
 }
 
@@ -168,7 +144,7 @@ header .nav-links li:last-child {
 
 .result-card .info .title {
   font-size: 1.25rem;
-  color: var(--primary);
+  color: black;
   font-weight: 600;
   margin: 0;
 }
@@ -176,7 +152,7 @@ header .nav-links li:last-child {
 .result-card .info .release-date {
   font-size: 1.25rem;
   font-weight: 300;
-  color: var(--primary);
+  color: black;
   margin: 0;
 }
 
@@ -198,16 +174,16 @@ header .nav-links li:last-child {
 
 .count-pill {
   display: block;
-  background-color: var(--secondary);
+  background-color: rgb(119, 6, 2);
   padding: 5px 15px;
   font-size: 1.125rem;
   font-weight: 600;
   border-radius: 999px;
-  color: var(--primary);
+  color: white;
 }
 
 .movie-page .heading {
-  color: var(--primary);
+  color: black;
   margin: 0;
 }
 
@@ -248,7 +224,7 @@ header .nav-links li:last-child {
 }
 
 .movie-card:hover .overlay {
-  border: 3px solid var(--secondary);
+  border: 3px solid rgb(119, 6, 2);
 }
 
 .movie-card .inner-card-controls {
@@ -280,12 +256,71 @@ header .nav-links li:last-child {
 }
 
 .ctrl-btn:hover {
-  color: var(--secondary);
+  color: rgb(119, 6, 2);
   cursor: pointer;
 }
 
 .movie-page .no-movies {
-  color: #c4c4c4;
-  font-size: 3rem;
+  color: rgb(139, 139, 139);
+  font-size: 40px;
   text-align: center;
+}
+
+
+@media (max-width: 650px) {
+  .container {
+    padding: 0 5%;
+  }
+
+  .movie-card:hover .inner-card-controls {
+    text-align: center;
+  }
+}
+
+@media (max-width: 530px) {
+
+  header .inner-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  header a {
+    font-size: 15px;
+  }
+  
+  .btn {
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  header .brand {
+    text-align: center;
+    width: 100%;
+  }
+
+  header .brand {
+    margin-bottom: 20px;
+  }
+
+  .movie-page .header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .movie-page .heading {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 280px) {
+
+  header a {
+    font-size: 13px;
+  }
+  
+  .btn {
+    padding: 5px;
+    font-size: 13px;
+  }
 }
